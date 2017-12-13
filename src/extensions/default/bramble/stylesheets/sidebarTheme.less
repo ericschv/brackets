@@ -37,11 +37,10 @@ div.working-set-option-btn[style] {
 // Indicates used and available room in a project
 #project-size-info {
     padding: 12px 10px 24px;
-    transition: opacity .2s ease-out;
     overflow: hidden;
 
     &.hidden {
-        opacity: 0;
+        display: none;
     }
 
     .space-available {
@@ -434,6 +433,9 @@ body[data-theme='light-theme'] li.jstree-leaf a.selected-node:hover {
     }
     font-size: 15px;
     line-height: 15px;
+    @-moz-document url-prefix() {
+        line-height: 20px;
+    }
     background: white;
     top: 0 !important;
     display: block;
